@@ -2,24 +2,13 @@ export const contactContent = {
   metadata: {
     title: "Contact — Diligia",
     description:
-      "Get in touch with Diligia. Apply to become a design partner or enquire about the platform.",
+      "Get in touch with Diligia. We'd love to hear from commercial agencies, solicitors, and operators.",
   },
   hero: {
     eyebrow: "Get in touch",
     title: "Let's start a conversation.",
     intro:
       "Whether you're a commercial agency, property solicitor, investor, or someone who's felt this problem firsthand — we'd love to hear from you.",
-  },
-  partnerCallout: {
-    title: "Design partners",
-    description:
-      "Test Diligia on one live deal — free. Help shape the product before launch.",
-    perks: [
-      "One deal, no cost",
-      "Direct input on the product",
-      "Founding partner recognition",
-      "Preferred pricing at launch",
-    ],
   },
   form: {
     title: "Send a message",

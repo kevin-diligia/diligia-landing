@@ -56,6 +56,16 @@
   z-index: 1;
 }
 
+.glare-button:disabled,
+.glare-button[data-disabled] {
+  box-shadow: none;
+}
+
+.glare-button:disabled::after,
+.glare-button[data-disabled]::after {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .glare-text {
     animation: none;

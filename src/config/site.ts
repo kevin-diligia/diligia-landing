@@ -3,8 +3,9 @@ export const siteConfig = {
   tagline: "The truth behind every transaction.",
   description:
     "Australia's first Transaction Management Platform purpose-built for commercial property.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://diligia.com.au",
   formspreeEndpoint: "https://formspree.io/f/xjgjapja",
+  formspreeFormId: "xjgjapja",
   email: "sean@diligia.com.au",
   company: {
     legalName: "Diligia Pty Ltd",

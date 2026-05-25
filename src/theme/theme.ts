@@ -111,5 +111,35 @@ export const diligiaTheme = createTheme({
         },
       },
     },
+    Select: {
+      styles: {
+        input: {
+          backgroundColor: "rgba(255,255,255,0.04)",
+          borderColor: "rgba(255,255,255,0.1)",
+          color: "#ffffff",
+          "&::placeholder": {
+            color: "rgba(255,255,255,0.2)",
+          },
+          "&:focus": {
+            borderColor: "rgba(29,158,117,0.5)",
+            backgroundColor: "rgba(255,255,255,0.06)",
+          },
+        },
+        label: {
+          fontSize: "11px",
+          fontWeight: 500,
+          letterSpacing: "0.1em",
+          textTransform: "uppercase",
+          color: "rgba(255,255,255,0.35)",
+        },
+        dropdown: {
+          backgroundColor: "#0a222b",
+          borderColor: "rgba(255,255,255,0.1)",
+        },
+        option: {
+          color: "rgba(255,255,255,0.8)",
+        },
+      },
+    },
   },
 });

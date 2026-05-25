@@ -1,13 +1,28 @@
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Button, Flex, TextInput } from "@mantine/core";
+import { useForm, ValidationError } from "@formspree/react";
 import { ArrowRight } from "lucide-react";
 import { homeContent } from "@/config/content/home";
-import { FormspreeForm } from "./FormspreeForm";
+import { siteConfig } from "@/config/site";
 
 export function DesignPartnerForm() {
+  const router = useRouter();
   const { partner } = homeContent;
+  const [state, handleSubmit] = useForm(siteConfig.formspreeFormId);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      router.push("/thank-you");
+    }
+  }, [state.succeeded, router]);
 
   return (
-    <FormspreeForm source="Design Partner Application">
+    <form onSubmit={handleSubmit}>
+      <input type="hidden" name="source" value="Design Partner Application" />
+
       <Flex
         direction={{ base: "column", xs: "row" }}
         gap={0}
@@ -45,11 +60,18 @@ export function DesignPartnerForm() {
           fz="sm"
           fw={500}
           style={{ flexShrink: 0 }}
+          disabled={state.submitting}
+          loading={state.submitting}
           rightSection={<ArrowRight size={16} aria-hidden />}
         >
           {partner.submitLabel}
         </Button>
       </Flex>
-    </FormspreeForm>
+
+      <ValidationError
+        errors={state.errors}
+        style={{ color: "#ff6b6b", fontSize: 13, marginTop: 8 }}
+      />
+    </form>
   );
 }

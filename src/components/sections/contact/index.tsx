@@ -1,7 +1,6 @@
 import { Anchor, Box, Container, Stack, Text, Title } from "@mantine/core";
 import { contactContent } from "@/config/content/contact";
 import { siteConfig } from "@/config/site";
-import { PerkList } from "@/components/ui/PerkList";
 import { ContactForm } from "@/components/forms/ContactForm";
 import classes from "./index.module.css";
 
@@ -12,52 +11,52 @@ const companyDetails = [
 ] as const;
 
 export function ContactSection() {
-  const { partnerCallout, form } = contactContent;
+  const { hero, form } = contactContent;
 
   return (
     <Container size="xl" py={{ base: 48, md: 80 }} px={{ base: 24, md: 64 }}>
-      <Box className={classes.layout}>
-        <Stack gap="xl">
-          <Box className={classes.callout}>
-            <Title order={3} className={classes.calloutTitle}>
-              {partnerCallout.title}
+      <Stack gap="lg">
+        <Box className={classes.layout}>
+          <Stack gap="lg" className={classes.heroColumn}>
+            <Text className={classes.eyebrow}>{hero.eyebrow}</Text>
+            <Title order={1} fz={{ base: "1.75rem", md: "2.5rem" }} lh={1.15}>
+              {hero.title}
             </Title>
-            <Text className={classes.calloutText}>{partnerCallout.description}</Text>
-            <Stack gap={8} mt="md">
-              <PerkList perks={partnerCallout.perks} />
-            </Stack>
-          </Box>
+            <Text fz={{ base: "sm", md: "md" }} c="rgba(255,255,255,0.55)" lh={1.75}>
+              {hero.intro}
+            </Text>
+          </Stack>
 
-          <Box className={classes.infoBlock}>
-            <Text className={classes.infoTitle}>Company details</Text>
-            <Stack gap={0}>
-              {companyDetails.map(({ label, value }) => (
-                <InfoRow key={label} label={label} value={value} />
-              ))}
-              <InfoRow
-                label="Email"
-                value={
-                  <Anchor
-                    href={`mailto:${siteConfig.email}`}
-                    className={classes.emailLink}
-                    underline="never"
-                  >
-                    {siteConfig.email}
-                  </Anchor>
-                }
-              />
-            </Stack>
-          </Box>
-        </Stack>
+          <Stack gap="xl" className={classes.formColumn}>
+            <Box className={classes.formPanel}>
+              <Text className={classes.formSubtitle}>{form.subtitle}</Text>
+              <ContactForm />
+            </Box>
 
-        <Box className={classes.formPanel}>
-          <Title order={2} className={classes.formTitle}>
-            {form.title}
-          </Title>
-          <Text className={classes.formSubtitle}>{form.subtitle}</Text>
-          <ContactForm />
+
+          </Stack>
         </Box>
-      </Box>
+        <Box className={classes.infoBlock}>
+          <Text className={classes.infoTitle}>Company details</Text>
+          <Stack gap={0}>
+            {companyDetails.map(({ label, value }) => (
+              <InfoRow key={label} label={label} value={value} />
+            ))}
+            <InfoRow
+              label="Email"
+              value={
+                <Anchor
+                  href={`mailto:${siteConfig.email}`}
+                  className={classes.emailLink}
+                  underline="never"
+                >
+                  {siteConfig.email}
+                </Anchor>
+              }
+            />
+          </Stack>
+        </Box>
+      </Stack>
     </Container>
   );
 }
