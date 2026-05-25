@@ -17,7 +17,7 @@ export function Header() {
       <Box component="header" className={classes.header}>
         <Group justify="space-between" align="center" wrap="nowrap">
           <Link href="/" className={classes.logoLink} onClick={close}>
-            <DiligiaLogo variant="long" height={32} />
+            <DiligiaLogo variant="long" height={40} />
           </Link>
 
           <Group gap={40} visibleFrom="md" className={classes.navLinks}>
