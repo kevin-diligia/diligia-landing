@@ -3,7 +3,7 @@ import { homeContent } from "@/config/content/home";
 import { siteConfig } from "@/config/site";
 import { GlowingSpan } from "@/components/ui/GlowingSpan";
 import { LinkButton } from "@/components/ui/LinkButton";
-import classes from "./HeroSection.module.css";
+import classes from "./index.module.css";
 import Image from "next/image";
 import { Stats } from "./stats";
 
@@ -21,11 +21,7 @@ export function HeroSection() {
             {hero.titleSuffix}
           </Title>
           <Text fz={{ base: "xs", md: "md" }} ta={"left"} maw={{ base: "100%", md: "75%" }}>
-            Built for{" "}
-            <GlowingSpan>
-              agents, vendors, purchasers, and their advisors.
-            </GlowingSpan>{" "}
-            One workspace, from campaign launch through to settlement.
+            {hero.subtitle}
           </Text>
 
 

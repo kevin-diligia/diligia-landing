@@ -18,12 +18,8 @@ export const siteConfig = {
     { label: "Get in touch", href: "/contact" },
   ],
   footer: {
-    exploreLinks: [
+    links: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
-    ],
-    companyLinks: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
     ],

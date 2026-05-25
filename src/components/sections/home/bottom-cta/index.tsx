@@ -1,7 +1,8 @@
 import { Box, Container, Stack, Text, Title } from "@mantine/core";
 import { homeContent } from "@/config/content/home";
+import { GlowingSpan } from "@/components/ui/GlowingSpan";
 import { LinkButton } from "@/components/ui/LinkButton";
-import classes from "./BottomCtaSection.module.css";
+import classes from "./index.module.css";
 
 export function BottomCtaSection() {
   const { bottomCta } = homeContent;
@@ -13,7 +14,8 @@ export function BottomCtaSection() {
         <Stack align="center" ta="center" gap="md">
           <Title order={2} className={classes.title}>
             {bottomCta.title}{" "}
-            <span className="italic-accent">{bottomCta.titleAccent}</span>
+            <GlowingSpan>{bottomCta.titleAccent}</GlowingSpan>
+            {bottomCta.titleSuffix}
           </Title>
           <Text className={classes.body}>{bottomCta.body}</Text>
           <LinkButton href={bottomCta.cta.href} size="md" mt="md">

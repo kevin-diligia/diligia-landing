@@ -1,6 +1,6 @@
 import { Box, Group, Stack, Text } from "@mantine/core";
 import { aboutContent } from "@/config/content/about";
-import classes from "./FounderStrip.module.css";
+import classes from "./index.module.css";
 
 export function FounderStrip() {
   const { founder } = aboutContent;

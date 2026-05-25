@@ -42,7 +42,6 @@ body {
   animation: fadeUp 1s ease both;
 }
 
-.italic-accent {
-  color: var(--teal);
-  font-style: italic;
+footer [data-footer-link]:hover {
+  color: var(--teal) !important;
 }

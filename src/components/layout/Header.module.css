@@ -6,7 +6,7 @@
   z-index: 100;
   padding: 16px 64px;
   background: var(--header-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(29, 158, 117, 0.15);
 }
 

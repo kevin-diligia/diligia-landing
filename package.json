@@ -12,6 +12,7 @@
     "@mantine/core": "^9.2.1",
     "@mantine/hooks": "^9.2.1",
     "framer-motion": "^12.40.0",
+    "lucide-react": "^1.16.0",
     "next": "16.2.6",
     "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { aboutContent } from "@/config/content/about";
-import { AboutCta } from "@/components/sections/about/AboutCta";
-import { FounderStrip } from "@/components/sections/about/FounderStrip";
-import { ProductGrid } from "@/components/sections/about/ProductGrid";
-import { ValuesGrid } from "@/components/sections/about/ValuesGrid";
+import { AboutCta } from "@/components/sections/about/cta";
+import { FounderStrip } from "@/components/sections/about/founder-strip";
+import { ProductGrid } from "@/components/sections/about/product";
+import { ValuesGrid } from "@/components/sections/about/values";
 import { GradientDivider } from "@/components/ui/GradientDivider";
 import { PageHero } from "@/components/ui/PageHero";
 
@@ -17,17 +17,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <PageHero
-        eyebrow={hero.eyebrow}
-        title={
-          <>
-            {hero.title}
-            <br />
-            <span className="italic-accent">{hero.titleAccent}</span>
-          </>
-        }
-        intro={hero.intro}
-      >
+      <PageHero title={hero.title} intro={hero.intro}>
         <FounderStrip />
       </PageHero>
       <GradientDivider />

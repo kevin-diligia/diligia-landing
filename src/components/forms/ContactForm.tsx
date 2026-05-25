@@ -1,97 +1,84 @@
+import {
+  Button,
+  NativeSelect,
+  SimpleGrid,
+  Stack,
+  Text,
+  TextInput,
+  Textarea,
+} from "@mantine/core";
+import { ArrowRight } from "lucide-react";
 import { contactContent } from "@/config/content/contact";
 import { FormspreeForm } from "./FormspreeForm";
-import classes from "./ContactForm.module.css";
 
 export function ContactForm() {
   const { form } = contactContent;
 
   return (
     <FormspreeForm source="Contact form">
-      <div className={classes.formRow}>
-        <div className={classes.formGroup}>
-          <label className={classes.label} htmlFor="first_name">
-            First name
-          </label>
-          <input
-            id="first_name"
-            className={classes.input}
-            type="text"
+      <Stack gap="md">
+        <SimpleGrid cols={{ base: 1, sm: 2 }}>
+          <TextInput
+            label="First name"
             name="first_name"
             placeholder="James"
             required
           />
-        </div>
-        <div className={classes.formGroup}>
-          <label className={classes.label} htmlFor="last_name">
-            Last name
-          </label>
-          <input
-            id="last_name"
-            className={classes.input}
-            type="text"
+          <TextInput
+            label="Last name"
             name="last_name"
             placeholder="Harper"
             required
           />
-        </div>
-      </div>
+        </SimpleGrid>
 
-      <div className={classes.formGroup}>
-        <label className={classes.label} htmlFor="email">
-          Email address
-        </label>
-        <input
-          id="email"
-          className={classes.input}
-          type="email"
+        <TextInput
+          label="Email address"
           name="email"
+          type="email"
           placeholder="james@agency.com.au"
           required
         />
-      </div>
 
-      <div className={classes.formGroup}>
-        <label className={classes.label} htmlFor="company">
-          Company
-        </label>
-        <input
-          id="company"
-          className={classes.input}
-          type="text"
+        <TextInput
+          label="Company"
           name="company"
           placeholder="Your agency or firm"
         />
-      </div>
 
-      <div className={classes.formGroup}>
-        <label className={classes.label} htmlFor="role">
-          I am a...
-        </label>
-        <select id="role" className={classes.select} name="role">
-          {form.roleOptions.map((option) => (
-            <option key={option.value || "default"} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </div>
+        <NativeSelect
+          label="I am a..."
+          name="role"
+          data={form.roleOptions.map((option) => ({
+            value: option.value,
+            label: option.label,
+          }))}
+        />
 
-      <div className={classes.formGroup}>
-        <label className={classes.label} htmlFor="message">
-          Message
-        </label>
-        <textarea
-          id="message"
-          className={classes.textarea}
+        <Textarea
+          label="Message"
           name="message"
           placeholder="Tell us about your interest in Diligia — whether you're looking to become a design partner, learn more about the platform, or discuss something else entirely."
+          minRows={5}
+          autosize
         />
-      </div>
 
-      <button type="submit" className={`${classes.submit} glare-button`}>
-        {form.submitLabel}
-      </button>
-      <p className={classes.note}>{form.note}</p>
+        <Button
+          type="submit"
+          className="glare-button"
+          fullWidth
+          mt="xs"
+          fz="sm"
+          fw={500}
+          rightSection={<ArrowRight size={16} aria-hidden />}
+        >
+          {form.submitLabel}
+        </Button>
+
+        <Text fz="xs" c="rgba(255, 255, 255, 0.22)" ta="center" lh={1.6}>
+          {form.note}
+        </Text>
+      </Stack>
     </FormspreeForm>
   );
 }

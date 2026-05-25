@@ -6,8 +6,7 @@ export const aboutContent = {
   },
   hero: {
     eyebrow: "About Diligia",
-    title: "Built by someone who",
-    titleAccent: "lived the problem.",
+    title: "Built by someone who lived the problem.",
     intro:
       "Diligia wasn't conceived in a boardroom. It was conceived in the field — after a decade of leading transactions from every side of the table and asking the same question every time: why is this still so hard?",
   },
@@ -19,8 +18,7 @@ export const aboutContent = {
   },
   platform: {
     eyebrow: "The platform",
-    title: "One workspace for the",
-    titleAccent: "entire transaction lifecycle.",
+    title: "One workspace for the entire transaction lifecycle.",
     body: "Diligia is a Transaction Management Platform purpose-built for Australian commercial property. It replaces the email chains, Word documents, and Excel spreadsheets that currently manage every deal — with a structured, multi-party workspace that every participant uses simultaneously.",
     layers: [
       {
@@ -71,8 +69,7 @@ export const aboutContent = {
   },
   values: {
     eyebrow: "What we believe",
-    title: "The values behind",
-    titleAccent: "the platform.",
+    title: "The values behind the platform.",
     body: "Built on principles that come directly from the experience of doing deals — not from a product roadmap.",
     items: [
       {
@@ -114,8 +111,7 @@ export const aboutContent = {
     ],
   },
   cta: {
-    title: "Ready to run a transaction",
-    titleAccent: "on Diligia?",
+    title: "Ready to run a transaction on Diligia?",
     body: "We're onboarding a select group of commercial property agencies as design partners — one free transaction to shape the platform before it launches.",
     buttonLabel: "Get in touch →",
     href: "/contact",

@@ -16,35 +16,34 @@ export const homeContent = {
     secondaryCta: { label: "Learn more", href: "/about" },
   },
   partner: {
-    badge: "Design Partner Program",
-    availability: "Limited places available",
-    title: "Test Diligia on a live transaction. Free.",
+    headline: "Apply to become an early design partner",
+    title: "Run a live deal on Diligia. Free.",
     description:
-      "We're inviting a select group of commercial property agencies to run one transaction through Diligia at no cost. Shape the product before it launches and be recognised as a founding partner.",
+      "We're testing with a small group of agencies on real transactions. Help shape the product and get founding partner status.",
     perks: [
-      "One transaction, completely free",
-      "Direct input into the product",
+      "One deal, no cost",
+      "Direct input on the product",
       "Founding partner recognition",
       "Preferred pricing at launch",
     ],
     emailPlaceholder: "your@agency.com.au",
-    submitLabel: "Apply to partner →",
+    submitLabel: "Apply now",
   },
   stats: [
     {
       countTo: 10000,
       suffix: "+",
-      label: "Commercial property deals in Australia each year",
+      label: "Commercial deals in Australia each year",
     },
     {
       countTo: 850,
       prefix: "$",
       suffix: "B+",
-      label: "Commercial property value transacted yearly",
+      label: "In commercial property transacted yearly",
     },
     {
       text: "Zero",
-      label: "Purpose built platforms covering the full transaction",
+      label: "Tools built for the full deal lifecycle",
     },
   ],
   audience: {
@@ -59,73 +58,70 @@ export const homeContent = {
     ],
   },
   problems: {
-    eyebrow: "Why Diligia exists",
-    title: "Commercial property transactions",
-    titleAccent: "fundamentally broken.",
-    body: "Every commercial property transaction in Australia is currently managed across email chains, Word documents, and Excel spreadsheets. There is no platform purpose-built to manage the full lifecycle — from campaign through to post-settlement — until now.",
+    title: "Most commercial deals still run on email and spreadsheets.",
+    body: "Nothing ties the full transaction together, especially from listing a property through to settlement and what comes after.",
     cards: [
       {
-        title: "Communication breakdown",
+        title: "Lost in email",
         description:
-          "Information requests flow through unstructured email chains with no central tracking, no accountability, and no permanent record of what was asked, answered, or agreed.",
+          "Requests and replies sit in inboxes. No shared list of what's open, answered, or agreed.",
         icon: "document",
       },
       {
-        title: "No shared visibility",
+        title: "No shared view",
         description:
-          "Every party — agent, vendor, buyer, solicitor — maintains a different view of progress. Without a single source of truth, critical items go unresolved and timelines slip without warning.",
+          "Each party tracks progress differently. Items get missed and deadlines slip without anyone noticing.",
         icon: "clock",
       },
       {
-        title: "Completion chaos",
+        title: "Settlement chaos",
         description:
-          "Settlement obligations — supplier novations, licence transfers, employee entitlements, social media handovers — are tracked in Word documents with no audit trail and no shared accountability.",
+          "Supplier transfers, licences, staff entitlements — tracked in separate docs with no shared checklist.",
         icon: "checklist",
       },
       {
-        title: "Deals fall over",
+        title: "Deals fall over late",
         description:
-          "Transactions collapse at critical moments because outstanding items were never visible to all parties simultaneously. The damage is done before anyone knows there's a problem.",
+          "Problems surface when it's too late, because nobody had one place to see what was still outstanding.",
         icon: "star",
       },
     ],
   },
   phases: {
-    eyebrow: "The platform",
-    title: "One workspace.",
-    titleAccent: "Every phase.",
-    body: "Diligia follows the transaction from the moment a listing is created through to post-settlement obligations. Every party. Every document. Every action. In one place.",
+    title: "One workspace. Every stage of the deal.",
+    body: "Every party and document in one place for listing, due diligence, settlement, and post-settlement.",
     items: [
       {
-        phase: "Phase 01",
-        title: "Listings & Campaigns",
+        phase: "01",
+        title: "Listings & campaigns",
         description:
-          "Create the listing, launch the campaign, manage expressions of interest, and track data room activity across all prospective buyers.",
+          "Create the listing, run the campaign, and manage enquiries and data room access.",
       },
       {
-        phase: "Phase 02",
-        title: "Exclusive Due Diligence",
+        phase: "02",
+        title: "Due diligence",
         description:
-          "DD checklist, structured RFI tracker, data room with role-based access, and real-time visibility for every party simultaneously.",
+          "DD checklist, request tracker, and a data room with access for each party.",
       },
       {
-        phase: "Phase 03",
+        phase: "03",
         title: "Settlement",
         description:
-          "Conditions precedent tracker, supplier contracts register, employee transition manager, and a structured completion checklist.",
+          "Track conditions, supplier contracts, staff transitions, and completion items.",
       },
       {
-        phase: "Phase 04",
-        title: "Post-Settlement",
+        phase: "04",
+        title: "Post-settlement",
         description:
-          "Settlement adjustment reconciliation, employee entitlement recalculations, book debts, and long-term obligation tracking.",
+          "Adjustments, entitlements, book debts, and ongoing obligations after close.",
       },
     ],
   },
   bottomCta: {
-    title: "Ready to run your first",
-    titleAccent: "transaction on Diligia?",
-    body: "We're working with a founding group of commercial property agencies to test the platform on live transactions before launch. No cost. No commitment. Just a better way to manage a deal.",
-    cta: { label: "Apply to become a design partner", href: "#partner" },
+    title: "Ready to run a deal on",
+    titleAccent: "Diligia",
+    titleSuffix: "?",
+    body: "Join our founding group of agencies testing the platform on live transactions. Free to try. No lock-in.",
+    cta: { label: "Apply as a design partner", href: "#partner" },
   },
 } as const;

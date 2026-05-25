@@ -1,49 +1,65 @@
+"use client";
+
 import { Stack, Text, Title } from "@mantine/core";
+import { motion, useReducedMotion } from "framer-motion";
 
 type SectionHeaderProps = {
-  eyebrow: string;
   title: React.ReactNode;
   body?: string;
   maxWidth?: number;
 };
 
+const viewport = { once: true, margin: "-40px 0px" };
+
 export function SectionHeader({
-  eyebrow,
   title,
   body,
-  maxWidth = 600,
+  maxWidth = 640,
 }: SectionHeaderProps) {
+  const reduceMotion = useReducedMotion();
+
+  const fadeUp = reduceMotion
+    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
+    : { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
+
+  const itemTransition = reduceMotion
+    ? { duration: 0.3 }
+    : { duration: 0.8, ease: "easeOut" as const };
+
   return (
-    <Stack gap="md">
-      <Text
-        size="xs"
-        fw={500}
-        tt="uppercase"
-        c="teal.5"
-        style={{ letterSpacing: "0.18em" }}
-      >
-        {eyebrow}
-      </Text>
-      <Title
-        order={2}
-        style={{
-          fontSize: "clamp(32px, 4vw, 50px)",
-          lineHeight: 1.15,
-        }}
-      >
-        {title}
-      </Title>
-      {body && (
-        <Text
-          size="lg"
-          fw={300}
-          c="rgba(255,255,255,0.5)"
-          maw={maxWidth}
-          style={{ lineHeight: 1.8 }}
-        >
-          {body}
-        </Text>
-      )}
-    </Stack>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewport}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: reduceMotion ? 0 : 0.15 },
+        },
+      }}
+    >
+      <Stack gap="sm">
+        <motion.div variants={fadeUp} transition={itemTransition}>
+          <Title
+            order={2}
+            fz={{ base: "1.5rem", md: "2.5rem" }}
+            maw={{ base: "100%", md: maxWidth }}
+          >
+            {title}
+          </Title>
+        </motion.div>
+        {body && (
+          <motion.div variants={fadeUp} transition={itemTransition}>
+            <Text
+              fz={{ base: "xs", md: "md" }}
+              c="rgba(255,255,255,0.5)"
+              maw={maxWidth}
+            >
+              {body}
+            </Text>
+          </motion.div>
+        )}
+      </Stack>
+    </motion.div>
   );
 }

@@ -6,27 +6,25 @@ export const contactContent = {
   },
   hero: {
     eyebrow: "Get in touch",
-    title: "Let's start a",
-    titleAccent: "conversation.",
+    title: "Let's start a conversation.",
     intro:
       "Whether you're a commercial agency, property solicitor, investor, or someone who's felt this problem firsthand — we'd love to hear from you.",
   },
   partnerCallout: {
-    title: "Design Partner Program",
+    title: "Design partners",
     description:
-      "We're inviting a select group of commercial property agencies to test Diligia on one live transaction — completely free. Shape the product before it launches.",
+      "Test Diligia on one live deal — free. Help shape the product before launch.",
     perks: [
-      "One transaction, completely free",
-      "Direct input into the product",
+      "One deal, no cost",
+      "Direct input on the product",
       "Founding partner recognition",
       "Preferred pricing at launch",
     ],
   },
   form: {
-    title: "Send us a message",
-    subtitle:
-      "Tell us a bit about yourself and what you're looking for. We'll be in touch within one business day.",
-    submitLabel: "Send message →",
+    title: "Send a message",
+    subtitle: "Tell us a bit about yourself. We reply within one business day.",
+    submitLabel: "Send message",
     note: "We respond to every enquiry within one business day. Your details will never be shared with third parties.",
     roleOptions: [
       { value: "", label: "Select your role" },
@@ -47,8 +45,7 @@ export const thankYouContent = {
     description: "Thank you for contacting Diligia.",
   },
   eyebrow: "Message received",
-  title: "Thank you for",
-  titleAccent: "getting in touch.",
+  title: "Thank you for getting in touch.",
   body: "We've received your message and will be in touch shortly. We look forward to the conversation.",
   buttonLabel: "Back to home",
 } as const;

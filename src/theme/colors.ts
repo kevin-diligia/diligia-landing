@@ -35,7 +35,7 @@ export function getThemeCssVariables(): Record<string, string> {
     "--teal-dim": themeColors.tealDim,
     "--gray": gray,
     "--white": themeColors.white,
-    "--header-bg": `rgba(${navyRgb}, 0.92)`,
+    "--header-bg": `rgba(${navyRgb}, 0.75)`,
   };
 }
 

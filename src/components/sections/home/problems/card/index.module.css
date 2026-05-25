@@ -1,0 +1,85 @@
+.card {
+  position: relative;
+  min-height: fit-content;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+  overflow: hidden;
+}
+
+.accentTeal {
+  --accent-rgb: var(--teal-rgb);
+}
+
+.accentYellow {
+  --accent-rgb: 234, 179, 8;
+}
+
+.accentOrange {
+  --accent-rgb: 249, 115, 22;
+}
+
+.accentRed {
+  --accent-rgb: 239, 68, 68;
+}
+
+.card:hover {
+  border-color: rgba(var(--accent-rgb), 0.28);
+  background: rgba(var(--accent-rgb), 0.04);
+}
+
+.card:hover .icon {
+  opacity: 0.25;
+}
+
+.card:hover .cardDescription {
+  opacity: 1;
+}
+
+.icon {
+  position: absolute;
+  z-index: 0;
+  top: 16px;
+  right: 16px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.05;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    top: 50%;
+    right: auto;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -10%;
+  }
+}

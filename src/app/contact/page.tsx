@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { contactContent } from "@/config/content/contact";
-import { ContactSection } from "@/components/sections/contact/ContactSection";
+import { ContactSection } from "@/components/sections/contact";
 import { GradientDivider } from "@/components/ui/GradientDivider";
 import { PageHero } from "@/components/ui/PageHero";
 
@@ -14,17 +14,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHero
-        eyebrow={hero.eyebrow}
-        title={
-          <>
-            {hero.title}
-            <br />
-            <span className="italic-accent">{hero.titleAccent}</span>
-          </>
-        }
-        intro={hero.intro}
-      />
+      <PageHero title={hero.title} intro={hero.intro} />
       <GradientDivider />
       <ContactSection />
     </>
