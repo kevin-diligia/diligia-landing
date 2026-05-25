@@ -34,12 +34,7 @@ export function AudienceStrip() {
       }}
     >
       <Container size={"100%"} px={{ base: 16, md: 64 }}>
-        <Group
-          gap={32}
-          wrap="nowrap"
-          align="center"
-          className={classes.strip}
-        >
+        <Group gap={32} wrap="nowrap" align="center" className={classes.strip}>
           <Text size="xs" opacity={0.8} tt="uppercase" className={classes.label}>
             {audience.label}
           </Text>
