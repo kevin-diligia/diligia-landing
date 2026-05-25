@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ColorSchemeScript } from "@mantine/core";
+import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -42,7 +42,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      {...mantineHtmlProps}
+      data-mantine-color-scheme="dark"
+      className={`${dmSans.variable} ${playfair.variable}`}
+    >
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
       </head>

@@ -9,7 +9,7 @@ export function DiligiaMantineProvider({
   children: React.ReactNode;
 }) {
   return (
-    <MantineProvider theme={diligiaTheme} defaultColorScheme="dark">
+    <MantineProvider theme={diligiaTheme} forceColorScheme="dark">
       {children}
     </MantineProvider>
   );
