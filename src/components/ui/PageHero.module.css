@@ -1,0 +1,14 @@
+.title {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.08;
+  animation: fadeUp 0.8s ease both;
+}
+
+.intro {
+  font-size: 19px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.8;
+  max-width: 640px;
+  animation: fadeUp 0.8s ease 0.15s both;
+}
