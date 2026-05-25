@@ -14,8 +14,8 @@ export const siteConfig = {
   },
   navLinks: [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "About us", href: "/about" },
+    { label: "Get in touch", href: "/contact" },
   ],
   footer: {
     exploreLinks: [
@@ -29,10 +29,9 @@ export const siteConfig = {
     ],
   },
   colors: {
-    navy: "#0F2B3D",
+    navy: "#071821",
     teal: "#1D9E75",
     tealLight: "#25b888",
-    tealDim: "rgba(29,158,117,0.12)",
     gray: "#637D8C",
   },
 } as const;

@@ -53,7 +53,7 @@
 }
 
 .select option {
-  background: #0f2b3d;
+  background: var(--navy);
   color: #ffffff;
 }
 

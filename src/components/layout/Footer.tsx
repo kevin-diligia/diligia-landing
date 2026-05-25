@@ -1,5 +1,5 @@
-import { Anchor, Box, Container, Divider, Group, SimpleGrid, Stack, Text } from "@mantine/core";
-import { DiligiaLogo, DiligiaWordmark } from "@/components/brand/DiligiaLogo";
+import { Anchor, Box, Container, Divider, SimpleGrid, Stack, Text } from "@mantine/core";
+import { DiligiaLogo } from "@/components/brand/DiligiaLogo";
 import { LinkAnchor } from "@/components/ui/LinkButton";
 import { siteConfig } from "@/config/site";
 import classes from "./Footer.module.css";
@@ -12,10 +12,7 @@ export function Footer() {
       <Container size={1100} px={{ base: 24, md: 60 }}>
         <Stack gap="xl">
           <Stack gap="sm" maw={480}>
-            <Group gap="sm">
-              <DiligiaLogo size={26} />
-              <DiligiaWordmark size="sm" />
-            </Group>
+            <DiligiaLogo variant="long" height={26} />
             <Text className={classes.tagline} fs="italic">
               &ldquo;{siteConfig.tagline}&rdquo;
             </Text>

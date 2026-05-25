@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --navy: #0f2b3d;
-  --teal: #1d9e75;
-  --teal-light: #25b888;
-  --teal-dim: rgba(29, 158, 117, 0.12);
-  --white: #ffffff;
-}
-
 html {
   scroll-behavior: smooth;
 }

@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { DiligiaMantineProvider } from "@/components/providers/MantineProvider";
 import { siteConfig } from "@/config/site";
+import { themeCssText } from "@/theme/colors";
 import "@mantine/core/styles.css";
 import "@/styles/globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
     >
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
+        <style dangerouslySetInnerHTML={{ __html: themeCssText() }} />
       </head>
       <body
         style={{

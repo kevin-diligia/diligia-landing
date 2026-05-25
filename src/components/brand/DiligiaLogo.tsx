@@ -1,70 +1,45 @@
-import { siteConfig } from "@/config/site";
+import type { CSSProperties } from "react";
+
+const LOGO_ASSETS = {
+  icon: {
+    src: "/logo/logo_icon.svg",
+    aspectRatio: 651 / 652,
+  },
+  long: {
+    src: "/logo/logo_long.svg",
+    aspectRatio: 1425 / 750,
+  },
+} as const;
 
 type DiligiaLogoProps = {
-  size?: number;
+  variant?: keyof typeof LOGO_ASSETS;
+  height?: number;
+  className?: string;
+  alt?: string;
+  style?: CSSProperties;
 };
 
-export function DiligiaLogo({ size = 32 }: DiligiaLogoProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden>
-      <circle cx="10" cy="20" r="7" fill={siteConfig.colors.teal} />
-      <circle
-        cx="32"
-        cy="8"
-        r="4.5"
-        fill={siteConfig.colors.teal}
-        opacity="0.55"
-      />
-      <circle
-        cx="32"
-        cy="32"
-        r="4.5"
-        fill={siteConfig.colors.teal}
-        opacity="0.55"
-      />
-      <line
-        x1="17"
-        y1="16"
-        x2="28"
-        y2="10"
-        stroke={siteConfig.colors.teal}
-        strokeWidth="2"
-        opacity="0.5"
-      />
-      <line
-        x1="17"
-        y1="24"
-        x2="28"
-        y2="30"
-        stroke={siteConfig.colors.teal}
-        strokeWidth="2"
-        opacity="0.5"
-      />
-    </svg>
-  );
-}
-
-export function DiligiaWordmark({ size = "md" }: { size?: "sm" | "md" }) {
-  const fontSize = size === "sm" ? 18 : 22;
-  const supSize = size === "sm" ? 9 : 10;
+export function DiligiaLogo({
+  variant = "icon",
+  height = 32,
+  className,
+  alt = "Diligia",
+  style,
+}: DiligiaLogoProps) {
+  const { src, aspectRatio } = LOGO_ASSETS[variant];
 
   return (
-    <span
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt={alt}
+      className={className}
       style={{
-        fontFamily: "var(--font-playfair), Playfair Display, serif",
-        fontSize,
-        color: "#ffffff",
+        display: "block",
+        height,
+        width: height * aspectRatio,
+        ...style,
       }}
-    >
-      Diligia
-      <sup
-        style={{
-          fontSize: supSize,
-          color: siteConfig.colors.teal,
-        }}
-      >
-        ™
-      </sup>
-    </span>
+    />
   );
 }

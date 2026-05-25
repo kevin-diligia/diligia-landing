@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Box, Burger, Drawer, Group, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { DiligiaLogo, DiligiaWordmark } from "@/components/brand/DiligiaLogo";
+import { DiligiaLogo } from "@/components/brand/DiligiaLogo";
 import { siteConfig } from "@/config/site";
 import classes from "./Header.module.css";
 
@@ -17,8 +17,7 @@ export function Header() {
       <Box component="header" className={classes.header}>
         <Group justify="space-between" align="center" wrap="nowrap">
           <Link href="/" className={classes.logoLink} onClick={close}>
-            <DiligiaLogo size={32} />
-            <DiligiaWordmark />
+            <DiligiaLogo variant="long" height={32} />
           </Link>
 
           <Group gap={40} visibleFrom="md" className={classes.navLinks}>
@@ -26,9 +25,8 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`${classes.navLink} ${
-                  pathname === link.href ? classes.active : ""
-                }`}
+                className={`${classes.navLink} ${pathname === link.href ? classes.active : ""
+                  }`}
               >
                 {link.label}
               </Link>
@@ -59,16 +57,15 @@ export function Header() {
             backgroundColor: siteConfig.colors.navy,
           },
         }}
-        title={<DiligiaWordmark size="sm" />}
+        title={<DiligiaLogo variant="long" height={22} />}
       >
         <Stack gap="lg" mt="md">
           {siteConfig.navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`${classes.navLink} ${
-                pathname === link.href ? classes.active : ""
-              }`}
+              className={`${classes.navLink} ${pathname === link.href ? classes.active : ""
+                }`}
               onClick={close}
             >
               {link.label}
