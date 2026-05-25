@@ -1,0 +1,108 @@
+.hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 64px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 30%,
+      rgba(29, 158, 117, 0.08) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 80% 80%,
+      rgba(29, 158, 117, 0.04) 0%,
+      transparent 60%
+    );
+}
+
+.heroCityscape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: lighten;
+  opacity: 0.1;
+}
+
+.heroCityscapeImage {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: bottom center;
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(29, 158, 117, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 158, 117, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.heroNodes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.heroNodes svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  opacity: 0.06;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 4;
+  animation: fadeUp 1s ease both;
+}
+
+.heroTitle {
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.08;
+  margin-bottom: 28px;
+  animation: fadeUp 1s ease 0.2s both;
+}
+
+.heroSub {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  animation: fadeUp 1s ease 0.3s both;
+}
+
+.heroCta {
+  animation: fadeUp 1s ease 0.4s both;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 24px 80px;
+  }
+}

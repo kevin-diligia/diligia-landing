@@ -1,0 +1,74 @@
+@keyframes glare {
+  0%,
+  100% {
+    background-position: 120% center;
+  }
+
+  50% {
+    background-position: -20% center;
+  }
+}
+
+.glare-text {
+  display: inline;
+  color: var(--teal);
+  background-image: linear-gradient(
+    105deg,
+    var(--teal) 0%,
+    var(--teal-light) 30%,
+    rgba(255, 255, 255, 0.95) 50%,
+    var(--teal-light) 70%,
+    var(--teal) 100%
+  );
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glare 6s ease-in-out infinite;
+}
+
+.glare-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 0 18px rgba(var(--teal-rgb), 0.35);
+}
+
+.glare-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.12) 70%,
+    transparent 100%
+  );
+  background-size: 220% 100%;
+  animation: glare 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.glare-button .mantine-Button-label {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glare-text {
+    animation: none;
+    background-position: center;
+    -webkit-text-fill-color: var(--teal);
+    background-image: none;
+  }
+
+  .glare-button {
+    box-shadow: none;
+  }
+
+  .glare-button::after {
+    display: none;
+  }
+}

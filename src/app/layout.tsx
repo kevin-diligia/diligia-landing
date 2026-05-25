@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { DiligiaMantineProvider } from "@/components/providers/MantineProvider";
@@ -15,11 +15,11 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 });
 
-const playfair = Playfair_Display({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-playfair",
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function RootLayout({
       lang="en"
       {...mantineHtmlProps}
       data-mantine-color-scheme="dark"
-      className={`${dmSans.variable} ${playfair.variable}`}
+      className={`${dmSans.variable} ${jakarta.variable}`}
     >
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
@@ -63,7 +63,7 @@ export default function RootLayout({
       >
         <DiligiaMantineProvider>
           <Header />
-          <main style={{ flex: 1 }}>{children}</main>
+          <main style={{ flex: 1, margin: 0, padding: 0 }}>{children}</main>
           <Footer />
         </DiligiaMantineProvider>
       </body>

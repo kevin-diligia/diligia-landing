@@ -35,7 +35,7 @@ export const diligiaTheme = createTheme({
   },
   fontFamily: "var(--font-dm-sans), DM Sans, sans-serif",
   headings: {
-    fontFamily: "var(--font-playfair), Playfair Display, serif",
+    fontFamily: "var(--font-jakarta), Plus Jakarta Sans, sans-serif",
     fontWeight: "700",
   },
   defaultRadius: "4px",

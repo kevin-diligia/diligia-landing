@@ -32,17 +32,19 @@ export const homeContent = {
   },
   stats: [
     {
-      value: "10,000+",
-      label: "Commercial transactions per year in Australia",
+      countTo: 10000,
+      suffix: "+",
+      label: "Commercial property deals in Australia each year",
     },
     {
-      value: "$850B+",
-      label: "Total value of Australian commercial property transacted annually",
+      countTo: 850,
+      prefix: "$",
+      suffix: "B+",
+      label: "Commercial property value transacted yearly",
     },
     {
-      value: "Zero",
-      label:
-        "Platforms purpose-built for Australian commercial property transactions end-to-end",
+      text: "Zero",
+      label: "Purpose built platforms covering the full transaction",
     },
   ],
   audience: {

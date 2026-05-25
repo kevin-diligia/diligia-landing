@@ -10,9 +10,26 @@ type LinkButtonProps = PropsWithChildren<
   }
 >;
 
-export function LinkButton({ href, children, ...props }: LinkButtonProps) {
+function isPrimaryButton(variant: ButtonProps["variant"]) {
+  return !variant || variant === "filled" || variant === "gradient";
+}
+
+export function LinkButton({
+  href,
+  children,
+  variant,
+  className,
+  ...props
+}: LinkButtonProps) {
+  const classes = [
+    isPrimaryButton(variant) ? "glare-button" : undefined,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <Button component={Link} href={href} {...props}>
+    <Button component={Link} href={href} variant={variant} className={classes || undefined} {...props}>
       {children}
     </Button>
   );

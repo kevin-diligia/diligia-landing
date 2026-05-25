@@ -88,7 +88,7 @@ export function ContactForm() {
         />
       </div>
 
-      <button type="submit" className={classes.submit}>
+      <button type="submit" className={`${classes.submit} glare-button`}>
         {form.submitLabel}
       </button>
       <p className={classes.note}>{form.note}</p>

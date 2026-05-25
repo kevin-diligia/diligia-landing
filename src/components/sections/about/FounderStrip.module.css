@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-playfair), Playfair Display, serif;
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--teal);
@@ -23,7 +23,7 @@
 }
 
 .name {
-  font-family: var(--font-playfair), Playfair Display, serif;
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
 }

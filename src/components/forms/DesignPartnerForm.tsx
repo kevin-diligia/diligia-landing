@@ -15,7 +15,7 @@ export function DesignPartnerForm() {
           required
           className={classes.input}
         />
-        <button type="submit" className={classes.button}>
+        <button type="submit" className={`${classes.button} glare-button`}>
           {partner.submitLabel}
         </button>
       </div>

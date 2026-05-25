@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { homeContent } from "@/config/content/home";
 import { AudienceStrip } from "@/components/sections/home/AudienceStrip";
 import { BottomCtaSection } from "@/components/sections/home/BottomCtaSection";
-import { HeroSection } from "@/components/sections/home/HeroSection";
 import { PhasesSection } from "@/components/sections/home/PhasesSection";
 import { ProblemsSection } from "@/components/sections/home/ProblemsSection";
 import { GradientDivider } from "@/components/ui/GradientDivider";
+import { HeroSection } from "@/components/sections/home/hero/HeroSection";
 
 export const metadata: Metadata = {
   title: homeContent.metadata.title,
