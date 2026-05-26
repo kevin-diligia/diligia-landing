@@ -33,7 +33,7 @@
   left: 0;
   width: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   mix-blend-mode: lighten;
   opacity: 0.1;
 }
@@ -50,7 +50,7 @@
 .heroGrid {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 0;
   background-image:
     linear-gradient(rgba(29, 158, 117, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(29, 158, 117, 0.04) 1px, transparent 1px);
@@ -61,7 +61,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  z-index: 3;
+  z-index: 1;
 }
 
 .heroNodes svg {
@@ -76,7 +76,7 @@
 
 .heroContent {
   position: relative;
-  z-index: 4;
+  z-index: 5;
   animation: fadeUp 1s ease both;
 }
 

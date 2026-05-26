@@ -23,22 +23,16 @@ export function FounderSection() {
   return (
     <Container size="xl" p="xl" component="section">
       <Group align="stretch" wrap="wrap" gap="xl" className={classes.layout}>
-        <Box className={classes.photoWrap}>
-          <Box
-            className={classes.photo}
-            style={
-              founder.image
-                ? { backgroundImage: `url(${founder.image})` }
-                : undefined
-            }
-            aria-label={`Photo of ${founder.name}`}
-            role="img"
-          >
-            {!founder.image && (
-              <Text className={classes.initials}>{founder.initials}</Text>
-            )}
+        {founder.image && (
+          <Box className={classes.photoWrap}>
+            <Box
+              className={classes.photo}
+              style={{ backgroundImage: `url(${founder.image})` }}
+              aria-label={`Photo of ${founder.name}`}
+              role="img"
+            />
           </Box>
-        </Box>
+        )}
 
         <Stack gap="md" className={classes.content}>
           <Text className={classes.eyebrow}>{founder.eyebrow}</Text>
@@ -60,20 +54,18 @@ export function FounderSection() {
               <Text className={classes.role}>{founder.role}</Text>
             </Group>
           </Stack>
-          <Text fz={{ base: "sm", md: "md" }} c="rgba(255,255,255,0.55)" lh={1.75}>
-            {founder.bio}
-          </Text>
-          <Stack gap={8} component="ul" className={classes.expertise}>
-            {founder.expertise.map((item) => (
-              <Text key={item} component="li" fz={{ base: "xs", md: "sm" }}>
-                {item}
+          <Stack gap="md">
+            {founder.bio.map((paragraph) => (
+              <Text
+                key={paragraph}
+                fz={{ base: "sm", md: "md" }}
+                c="rgba(255,255,255,0.55)"
+                lh={1.75}
+              >
+                {paragraph}
               </Text>
             ))}
           </Stack>
-          <Text className={classes.quote} fz={{ base: "sm", md: "md" }}>
-            &ldquo;{founder.quote}&rdquo;
-          </Text>
-
         </Stack>
       </Group>
     </Container>

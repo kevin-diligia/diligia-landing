@@ -14,16 +14,12 @@ export const aboutContent = {
     name: "Sean Saliba",
     role: "Founder & CEO",
     linkedin: "https://www.linkedin.com/in/sean-saliba-229436190/",
-    initials: "SS",
     image: null as string | null,
-    bio: "Sean spent a decade on every side of commercial property — as vendor, buyer, agent, and operator. He has led transactions across asset classes, managed campaigns from EOI through Heads of Agreement, and sat in the room when deals fell apart because nobody had a single source of truth.",
-    expertise: [
-      "10+ years across vendor, buyer, agent, and operator roles",
-      "Led transactions from campaign through settlement and post-settlement",
-      "Deep experience with going-concern deals, RFIs, and multi-party coordination",
+    bio: [
+      "A decade spent on every side of a commercial property transaction — as vendor, buyer, agent, and operator — gives you a particular kind of clarity about what's broken.",
+      "Not the theory of it. The lived experience. The email chains that spiral. The Word document checklists that get emailed to seven parties and come back in seven different versions. The deals that fall over in the final week because nobody had a single source of truth.",
+      "Diligia isn't a solution someone built from the outside looking in. It's what happens when the person who felt the problem most acutely finally decides to solve it properly.",
     ],
-    quote:
-      "Diligia exists because someone who understood the problem deeply finally decided to solve it properly.",
   },
   cta: {
     title: "Ready to see",

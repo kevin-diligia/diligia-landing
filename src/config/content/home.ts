@@ -36,10 +36,10 @@ export const homeContent = {
       label: "Commercial deals in Australia each year",
     },
     {
-      countTo: 850,
+      countTo: 50,
       prefix: "$",
       suffix: "B+",
-      label: "In commercial property transacted yearly",
+      label: "In commercial property transacted annually",
     },
     {
       text: "Zero",

@@ -107,9 +107,6 @@ export function HeroSection() {
           />
         </svg>
       </Box>
-
-
-
     </Box >
   );
 }
